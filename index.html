@@ -18,6 +18,9 @@ body{
 }
 
 #section-about{
+    position:absolute !important;
+    top:0 !important;
+    bottom:auto !important;
     min-height:100vh;
     height:auto !important;
     overflow:visible !important;
@@ -767,7 +770,7 @@ a{cursor:none;}
 @keyframes dotFade{0%{opacity:.9;transform:translate(-50%,-50%) scale(1);}100%{opacity:0;transform:translate(-50%,-50%) scale(.1);}}
 
 /* ─── ABOUT ME ──────────────────────────────────── */
-#section-about .section-content{padding:0 12%;gap:60px;justify-content:space-between;}
+#section-about .section-content{padding:0 12% 180px;gap:60px;justify-content:space-between;}
 .about-left{flex:1;max-width:700px;}
 .about-left .eyebrow{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;letter-spacing:.3em;color:var(--gold);margin-bottom:25px; position:relative;
     top:100px;}

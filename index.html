@@ -1186,8 +1186,16 @@ a{cursor:none;}
 
 /* ─── RESPONSIVE ────────────────────────────────── */
 @media(max-width:900px){
-  #section-about .section-content{flex-direction:column;padding:80px 6% 40px;}
-  .about-right{margin-top:30px;}
+  #section-about .section-content{flex-direction:column;padding:180px 6% 180px;}
+  .about-right{
+    margin-top:30px;
+    margin-left:0;
+    left:0;
+    flex:none;
+    width:100%;
+    max-width:380px;
+    justify-content:flex-start;
+  }
   .tags-list{right:-5px;}
   .projects-carousel-wrap{height:440px;perspective:1200px;}
   .carousel-card{width:260px;margin-left:-130px;margin-top:-162px;}

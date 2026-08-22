@@ -622,7 +622,7 @@ video[src*="turn table muscel"]{
   --gold:#d8b96a; --ease:cubic-bezier(.77,0,.18,1);
   --ease2:cubic-bezier(.25,.46,.45,.94);
 }
-html,body{height:100%;width:100%;overflow:hidden;background:#05050a;
+html,body{min-height:100%;width:100%;overflow-x:hidden;overflow-y:auto !important;background:#05050a;
   font-family:'Georgia',serif; cursor:none;}
 img{-webkit-user-drag:none;user-select:none;}
 button{cursor:none;}
@@ -709,7 +709,7 @@ a{cursor:none;}
 #cover.closing #enter-btn{transition:opacity .6s .6s;opacity:1;}
 
 /* ─── SITE ──────────────────────────────────────── */
-#site{position:fixed;inset:0;z-index:1;opacity:0;visibility:hidden;transition:opacity .5s .8s;}
+#site{position:absolute;top:0;left:0;right:0;bottom:auto;min-height:100vh;height:auto;z-index:1;opacity:0;visibility:hidden;transition:opacity .5s .8s;}
 #site.live{opacity:1;visibility:visible;}
 
 /* ─── NAV ───────────────────────────────────────── */
@@ -770,7 +770,7 @@ a{cursor:none;}
 @keyframes dotFade{0%{opacity:.9;transform:translate(-50%,-50%) scale(1);}100%{opacity:0;transform:translate(-50%,-50%) scale(.1);}}
 
 /* ─── ABOUT ME ──────────────────────────────────── */
-#section-about .section-content{padding:0 12% 180px;gap:60px;justify-content:space-between;}
+#section-about .section-content{padding:150px 12% 180px;gap:60px;justify-content:space-between;}
 .about-left{flex:1;max-width:700px;}
 .about-left .eyebrow{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;letter-spacing:.3em;color:var(--gold);margin-bottom:25px;}
 .about-left h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(38px,5vw,60px);color:var(--ink);font-weight:400;margin-bottom:30px;}

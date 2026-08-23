@@ -63,6 +63,20 @@ body{
         margin-left:0;
         justify-content:center;
     }
+
+    #section-about .about-meta{
+        width:100%;
+        display:grid;
+        grid-template-columns:1fr;
+        row-gap:35px;
+        margin-top:50px;
+    }
+
+    #section-about .my_photo{
+        width:280px;
+        max-width:90%;
+        height:auto;
+    }
 }
 <style>
 /* Coke Process Image */
@@ -275,6 +289,65 @@ body{
     padding:8px 18px;
     cursor:pointer;
 }
+/* ─── ABOUT: EXPLORE PROJECTS BUTTON ─── */
+#section-about .next-btn-lg{
+    position:absolute;
+    left:50%;
+    bottom:45px;
+    transform:translateX(-50%);
+
+    width:320px;
+    height:58px;
+    padding:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:13px;
+    font-weight:300;
+    letter-spacing:.25em;
+
+    color:#ffffff !important;
+    background:rgba(30,30,45,.55);
+
+    border:1px solid rgba(255,210,80,.8);
+    border-radius:35px;
+
+    cursor:pointer;
+    z-index:100;
+}
+
+#section-about .next-btn-lg span{
+    display:inline-block !important;
+    transform:translateY(15px) !important;
+}
+
+#section-about .next-btn-lg svg{
+    stroke:#ffffff !important;
+    position:relative;
+    top:9px;
+}
+
+/* GOLD WHILE CLICKING */
+#section-about .next-btn-lg:active span{
+    color:var(--gold) !important;
+}
+
+#section-about .next-btn-lg:active svg{
+    stroke:var(--gold) !important;
+}
+.zombie-video-title{
+    color:#ffffff !important;
+    text-align:center;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:16px;
+    font-weight:300;
+    letter-spacing:.25em;
+    margin:15px auto 25px;
+}
 /* Muscle Man video position */
 video[src*="turn table muscel"]{
     display:block !important;
@@ -284,338 +357,6 @@ video[src*="turn table muscel"]{
     margin-left:auto !important;
     margin-right:auto !important;
 }
-
-/* =========================================
-   CLEAN ABOUT ME PAGE
-========================================= */
-
-#section-about {
-  position: fixed;
-  inset: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-#section-about .section-content {
-  min-height: 100vh;
-  height: auto;
-  padding: 130px 8% 140px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 340px;
-  gap: 80px;
-  align-items: start;
-}
-
-/* LEFT CONTENT */
-
-#section-about .about-left {
-  width: 100%;
-  max-width: 800px;
-  padding: 0;
-}
-
-#section-about .eyebrow {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 11px;
-  letter-spacing: .3em;
-  color: var(--gold);
-  margin: 0 0 20px;
-  position: static;
-}
-
-#section-about .about-left h1 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(42px, 5vw, 64px);
-  font-weight: 400;
-  color: var(--ink);
-  margin: 0 0 25px;
-  position: static;
-}
-
-#section-about .about-left > p {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 15px;
-  line-height: 1.9;
-  color: rgba(200,210,230,.9);
-  font-weight: 300;
-  width: 100%;
-  max-width: 760px;
-  margin: 0;
-  text-align: left;
-  position: static;
-}
-
-/* SKILLS AREA */
-
-#section-about .about-meta {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr 1.2fr;
-  gap: 40px;
-  width: 100%;
-  margin-top: 55px;
-  align-items: start;
-}
-
-#section-about .about-meta .meta-col {
-  position: static;
-  margin: 0;
-  padding: 0;
-}
-
-#section-about .about-meta .meta-col h3 {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: .08em;
-  color: #ffffff !important;
-  margin: 0 0 20px;
-  padding: 0;
-}
-
-/* SKILLS LIST */
-
-#section-about .skills-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 0;
-  margin: 0;
-}
-
-#section-about .skills-list li {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-  color: #ffffff !important;
-}
-
-/* SOFTWARE ICONS */
-
-#section-about .software-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 44px);
-  gap: 12px;
-  margin: 0;
-}
-
-#section-about .soft-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(180,120,255,.3);
-  overflow: hidden;
-}
-
-#section-about .soft-icon img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  display: block;
-}
-
-/* SOFT SKILLS */
-
-#section-about .soft-skills-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#section-about .soft-skill-row span {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-  color: #ffffff;
-  display: block;
-  margin-bottom: 7px;
-}
-
-#section-about .bar {
-  width: 100%;
-  height: 3px;
-  background: rgba(255,255,255,.15);
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-#section-about .bar-fill {
-  height: 100%;
-  background: var(--gold);
-  border-radius: 3px;
-}
-
-/* RIGHT PHOTO */
-
-#section-about .about-right {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: static;
-}
-
-#section-about .portrait-col {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: static;
-}
-
-#section-about .my_photo {
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: cover;
-  border: 4px solid #ffffff;
-  border-radius: 20px;
-  position: static;
-  margin: 0;
-}
-
-/* BACK BUTTON */
-
-#section-about .back-button {
-  position: fixed;
-  top: 55px;
-  left: 7%;
-  z-index: 100;
-  transform: none;
-
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-  letter-spacing: .12em;
-  color: #ffffff;
-
-  background: transparent;
-  border: 1px solid rgba(255,255,255,.5);
-  border-radius: 20px;
-  padding: 8px 18px;
-}
-
-/* EXPLORE PROJECTS BUTTON */
-
-#section-about .next-btn-lg {
-  position: fixed;
-  left: 50%;
-  bottom: 35px;
-  transform: translateX(-50%);
-  z-index: 100;
-
-  width: 320px;
-  min-width: 0;
-  height: 58px;
-  padding: 0;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-  letter-spacing: .18em;
-
-  color: #ffffff;
-  background: rgba(30,30,45,.65);
-
-  border: 1px solid rgba(255,210,80,.8);
-  border-radius: 35px;
-}
-
-#section-about .next-btn-lg span {
-  transform: none !important;
-}
-
-#section-about .next-btn-lg svg {
-  position: static !important;
-  top: auto !important;
-}
-
-/* TABLET */
-
-@media (max-width: 1000px) {
-  #section-about .section-content {
-    grid-template-columns: 1fr 280px;
-    gap: 45px;
-    padding-left: 7%;
-    padding-right: 7%;
-  }
-
-  #section-about .about-meta {
-    gap: 25px;
-  }
-
-  #section-about .my_photo {
-    max-width: 260px;
-  }
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-  #section-about {
-    position: absolute;
-    overflow-y: visible;
-  }
-
-  #section-about .section-content {
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
-    padding: 110px 7% 150px;
-    gap: 45px;
-  }
-
-  #section-about .about-left {
-    max-width: 100%;
-  }
-
-  #section-about .about-left h1 {
-    font-size: 46px;
-  }
-
-  #section-about .about-left > p {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-
-  #section-about .about-meta {
-    grid-template-columns: 1fr;
-    gap: 38px;
-    margin-top: 45px;
-  }
-
-  #section-about .about-right {
-    order: 2;
-  }
-
-  #section-about .my_photo {
-    max-width: 280px;
-  }
-
-  #section-about .back-button {
-    top: 25px;
-    left: 7%;
-  }
-
-  #section-about .next-btn-lg {
-    width: 280px;
-    height: 54px;
-    font-size: 11px;
-    bottom: 20px;
-  }
 /* ─── CALISTHENICS PROJECT ─── */
 
 .calisthenics-images{
@@ -1028,6 +769,18 @@ a{cursor:none;}
 /* ─── PARTICLE TRAIL ─────────────────────────────── */
 @keyframes dotFade{0%{opacity:.9;transform:translate(-50%,-50%) scale(1);}100%{opacity:0;transform:translate(-50%,-50%) scale(.1);}}
 
+/* ─── ABOUT ME ──────────────────────────────────── */
+#section-about .section-content{padding:0 12% 180px;gap:60px;justify-content:space-between;}
+.about-left{flex:1;max-width:700px;}
+.about-left .eyebrow{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;letter-spacing:.3em;color:var(--gold);margin-bottom:25px; position:relative;
+    top:100px;}
+.about-left h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(38px,5vw,60px);color:var(--ink);font-weight:400;margin-bottom:30px;  position:relative;top:110px;}
+.about-left p{font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;line-height:2;color:rgba(200,210,230,.85);font-weight:300; width:100%;text-align:left;letter-spacing:0.3;text-align:justify; position:relative;
+    top:110px;}
+#section-about .about-meta .meta-col:first-child h3,
+#section-about .about-meta .meta-col:first-child .skills-list li {
+    color:#ffffff !important;
+}
 /* MOVE SOFT SKILLS */
 #section-about .about-meta .meta-col:nth-child(3){
     position:relative;
@@ -1171,6 +924,40 @@ a{cursor:none;}
     border-radius:2px;
 }
 
+
+/* ─── PHOTO ON RIGHT ─── */
+
+#section-about .about-right{
+   flex:0 0 380px;
+    margin-left:100px;
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-start;
+    position:relative;
+    left:20px;
+    margin-top:-40px;
+}
+
+.portrait-col{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    position:relative;
+}
+
+.my_photo{
+    display:block;
+    width:280px;
+    max-width:100%;
+    height:auto;
+    object-fit:contain;
+    border:4px solid white;
+    border-radius:20px;
+    box-sizing:border-box;
+    position:relative;
+    left:500px;
+    top:-650px;
+}
 /* ─── PROJECTS ──────────────────────────────────── */
 #section-projects .section-content{padding:180px 7% 60px;align-items:flex-start;flex-direction:column;justify-content:center;}
 .projects-header{
@@ -1533,171 +1320,99 @@ a{cursor:none;}
 </nav>
 
   <!-- ─ ABOUT ─ -->
-<section class="section active" id="section-about">
-
+  <section class="section active" id="section-about">
   <button class="back-button" onclick="returnHome()">
     ← Back
-  </button>
+</button>
+    <div class="section-bg" id="bg-about"></div>
+    <div id="stars-about"></div>
+    <div class="section-content">
+      <div class="about-left">
+        <div class="eyebrow">ANIMATION ARTIST</div>
+        <h1>About Me</h1>
+        <p>Animation graduate with a strong passion for 3D modeling, illustration, and VFX. I enjoy combining technical skills with artistic creativity to craft compelling visual experiences, working across Blender, ZBrush, Maya and Adobe After Effects to take projects from concept through to final render. Always eager to learn new tools, techniques, and workflows, I strive to grow as a visual storyteller and contribute to innovative creative projects.</p>
 
-  <div class="section-bg" id="bg-about"></div>
-  <div id="stars-about"></div>
-
-  <div class="section-content">
-
-    <!-- LEFT SIDE -->
-    <div class="about-left">
-
-      <div class="eyebrow">ANIMATION ARTIST</div>
-
-      <h1>About Me</h1>
-
-      <p>
-        Animation graduate with a strong passion for 3D modeling,
-        illustration, and VFX. I enjoy combining technical skills with
-        artistic creativity to craft compelling visual experiences,
-        working across Blender, ZBrush, Maya and Adobe After Effects
-        to take projects from concept through to final render. Always
-        eager to learn new tools, techniques, and workflows, I strive
-        to grow as a visual storyteller and contribute to innovative
-        creative projects.
-      </p>
-
-      <div class="about-meta">
-
-        <!-- SKILLS -->
-        <div class="meta-col">
-
-          <h3>Skills</h3>
-
-          <ul class="skills-list">
-            <li>3D modelling</li>
-            <li>Motion graphics</li>
-            <li>Illustration</li>
-            <li>Sound Design</li>
-            <li>User centric animation</li>
-            <li>Set design</li>
-          </ul>
-
-        </div>
-
-        <!-- DIGITAL SOFTWARE -->
-        <div class="meta-col">
-
-          <h3>Digital Software</h3>
-
-          <div class="software-grid">
-
-            <div class="soft-icon">
-              <img src="after-effects.png" alt="After Effects">
-            </div>
-
-            <div class="soft-icon">
-              <img src="zbrush.png" alt="ZBrush">
-            </div>
-
-            <div class="soft-icon">
-              <img src="illustrator.png" alt="Illustrator">
-            </div>
-
-            <div class="soft-icon">
-              <img src="photoshop.png" alt="Photoshop">
-            </div>
-
-            <div class="soft-icon">
-              <img src="maya.png" alt="Maya">
-            </div>
-
-            <div class="soft-icon">
-              <img src="blender.png" alt="Blender">
-            </div>
-
-            <div class="soft-icon">
-              <img src="indesign.png" alt="InDesign">
-            </div>
-
-            <div class="soft-icon">
-              <img src="procreate.png" alt="Procreate">
-            </div>
-
-            <div class="soft-icon">
-              <img src="toonsquide.png" alt="ToonSquid">
-            </div>
-
+        <div class="about-meta">
+          <div class="meta-col">
+            <h3>Skills</h3>
+            <ul class="skills-list">
+              <li>3D modelling</li>
+              <li>Motion graphics</li>
+              <li>illustration</li>
+              <li>Sound Design</li>
+              <li>User centric animation</li>
+              <li>Set design</li>
+            </ul>
           </div>
+          <div class="meta-col">
+            <h3>Digital Software</h3>
+            <div class="software-grid">
 
-        </div>
-
-        <!-- SOFT SKILLS -->
-        <div class="meta-col">
-
-          <h3>Soft Skills</h3>
-
-          <div class="soft-skills-list">
-
-            <div class="soft-skill-row">
-              <span>Creative thinking</span>
-              <div class="bar">
-                <div class="bar-fill" style="width:88%"></div>
-              </div>
-            </div>
-
-            <div class="soft-skill-row">
-              <span>Team work</span>
-              <div class="bar">
-                <div class="bar-fill" style="width:82%"></div>
-              </div>
-            </div>
-
-            <div class="soft-skill-row">
-              <span>Responsibility</span>
-              <div class="bar">
-                <div class="bar-fill" style="width:90%"></div>
-              </div>
-            </div>
-
-            <div class="soft-skill-row">
-              <span>Communication</span>
-              <div class="bar">
-                <div class="bar-fill" style="width:85%"></div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-    <!-- RIGHT SIDE PHOTO -->
-    <div class="about-right">
-
-      <div class="portrait-col">
-        <img src="my_photo.png" class="my_photo" alt="Profile">
-      </div>
-
-    </div>
-
+  <div class="soft-icon">
+    <img src="after-effects.png" alt="after-effects">
   </div>
 
-  <!-- EXPLORE PROJECTS BUTTON -->
-  <button class="next-btn next-btn-lg" data-next="projects">
+  <div class="soft-icon">
+    <img src="zbrush.png" alt="zBrush">
+  </div>
 
-    <span>EXPLORE PROJECTS</span>
+  <div class="soft-icon">
+    <img src="illustrator.png" alt="illustrator">
+  </div>
 
-    <svg width="26" height="26"
-         viewBox="0 0 24 24"
-         fill="none"
-         stroke="currentColor"
-         stroke-width="2">
+  <div class="soft-icon">
+    <img src="photoshop.png" alt="photoshop">
+  </div>
 
-      <polyline points="6 9 12 15 18 9"/>
+  <div class="soft-icon">
+    <img src="maya.png" alt="maya">
+  </div>
 
+  <div class="soft-icon">
+    <img src="blender.png" alt="blender">
+  </div>
+
+  <div class="soft-icon">
+    <img src="indesign.png" alt="indesign">
+  </div>
+
+  <div class="soft-icon">
+    <img src="procreate.png" alt="procreate">
+  </div>
+
+  <div class="soft-icon">
+    <img src="toonsquide.png" alt="toonsquide">
+  </div>
+
+</div>
+          <div class="meta-col">
+            <h3>Soft Skills</h3>
+            <div class="soft-skills-list">
+              <div class="soft-skill-row"><span>Creative thinking</span><div class="bar"><div class="bar-fill" style="width:88%"></div></div></div>
+              <div class="soft-skill-row"><span>Team work</span><div class="bar"><div class="bar-fill" style="width:82%"></div></div></div>
+              <div class="soft-skill-row"><span>Responsibility</span><div class="bar"><div class="bar-fill" style="width:90%"></div></div></div>
+              <div class="soft-skill-row"><span>Communication</span><div class="bar"><div class="bar-fill" style="width:85%"></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="portrait-col">
+          <img src="my_photo.png" class="my_photo" alt="Profile">
+        </div>
+      </div>
+    </div>
+    <button class="next-btn next-btn-lg" data-next="projects">
+     <span>EXPLORE PROJECTS</span>
+    <svg width="26" height="26" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9"/>
     </svg>
-
-  </button>
-
-</section>
+</button>
+      EXPLORE PROJECTS
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+  </section>
 
   <!-- ─ PROJECTS ─ -->
   <section class="section" id="section-projects">

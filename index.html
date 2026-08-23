@@ -1207,151 +1207,79 @@ a{cursor:none;}
   .tag-gallery{grid-template-columns:1fr;}
 
     /* =========================================================
-   ABOUT ME - RESPONSIVE VERSION
-   KEEPS YOUR EXISTING DESIGN
+   ABOUT ME - KEEP MY ORIGINAL DESIGN
+   ONLY SCALE IT FOR DIFFERENT LAPTOP SCREENS
    ========================================================= */
 
-/* Keep your original desktop layout */
-@media (min-width:901px){
-
-    /* Make the overall About section scale with screen width */
-    #section-about .section-content{
-        padding-left:clamp(70px, 12vw, 180px);
-        padding-right:clamp(70px, 12vw, 180px);
-    }
-
-    /* YOUR TITLE POSITION — now responsive */
-    #section-about .about-left .eyebrow{
-        top:clamp(70px, 7vw, 100px);
-    }
-
-    #section-about .about-left h1{
-        top:clamp(75px, 7.5vw, 110px);
-    }
-
-    #section-about .about-left p{
-        top:clamp(75px, 7.5vw, 110px);
-    }
-
-    /* YOUR SKILLS POSITION */
-    #section-about .about-meta .meta-col:nth-child(1),
-    #section-about .about-meta .meta-col:nth-child(2){
-        top:clamp(-65px, -4.5vw, -40px);
-    }
-
-    /* YOUR SOFT SKILLS POSITION */
-    #section-about .about-meta .meta-col:nth-child(3){
-        top:clamp(-227px, -15vw, -130px);
-        left:clamp(100px, 13vw, 200px);
-    }
-
-    /* YOUR PHOTO POSITION */
-    #section-about .about-right{
-        margin-left:clamp(40px, 6vw, 100px);
-        left:clamp(10px, 1.5vw, 20px);
-        margin-top:clamp(-40px, -3vw, -20px);
-    }
-
-    #section-about .my_photo{
-        width:clamp(230px, 20vw, 280px);
-        left:clamp(250px, 32vw, 500px);
-        top:clamp(-650px, -42vw, -400px);
-    }
-}
-
-
-/* =========================================================
-   SMALL LAPTOP
-   901px - 1200px
-   ========================================================= */
-
-@media (min-width:901px) and (max-width:1200px){
-
-    #section-about .section-content{
-        padding-left:50px;
-        padding-right:50px;
-        gap:25px;
-    }
-
-    #section-about .about-right{
-        flex:0 0 300px;
-        margin-left:20px;
-    }
-
-    #section-about .my_photo{
-        width:220px;
-        left:180px;
-        top:-470px;
-    }
-
-    #section-about .about-meta .meta-col:nth-child(3){
-        left:80px;
-        top:-150px;
-    }
-}
-
-
-/* =========================================================
-   NORMAL LAPTOP
-   1201px - 1440px
-   ========================================================= */
-
-@media (min-width:1201px) and (max-width:1440px){
-
-    #section-about .my_photo{
-        width:250px;
-        left:350px;
-        top:-550px;
-    }
-
-    #section-about .about-meta .meta-col:nth-child(3){
-        left:140px;
-        top:-190px;
-    }
-}
-
-
-/* =========================================================
-   LARGE DESKTOP
-   1441px+
-   ========================================================= */
-
+/* 1441px and above
+   Your original design stays exactly the same */
 @media (min-width:1441px){
 
-    #section-about .my_photo{
-        width:280px;
-        left:500px;
-        top:-650px;
+    #section-about .section-content{
+        transform:scale(1);
+        transform-origin:top left;
     }
+}
 
-    #section-about .about-meta .meta-col:nth-child(3){
-        left:200px;
-        top:-227px;
+
+/* 1281px - 1440px
+   Slightly reduce the whole composition */
+@media (min-width:1281px) and (max-width:1440px){
+
+    #section-about .section-content{
+        transform:scale(.92);
+        transform-origin:top left;
+        width:108.7%;
+    }
+}
+
+
+/* 1151px - 1280px
+   Reduce a little more */
+@media (min-width:1151px) and (max-width:1280px){
+
+    #section-about .section-content{
+        transform:scale(.84);
+        transform-origin:top left;
+        width:119%;
+    }
+}
+
+
+/* 1025px - 1150px
+   Smaller laptop */
+@media (min-width:1025px) and (max-width:1150px){
+
+    #section-about .section-content{
+        transform:scale(.76);
+        transform-origin:top left;
+        width:132%;
+    }
+}
+
+
+/* 901px - 1024px
+   Small laptop */
+@media (min-width:901px) and (max-width:1024px){
+
+    #section-about .section-content{
+        transform:scale(.68);
+        transform-origin:top left;
+        width:147%;
     }
 }
 
 
 /* =========================================================
    MOBILE
-   KEEP YOUR EXISTING MOBILE DESIGN
+   KEEP YOUR EXISTING MOBILE LAYOUT
    ========================================================= */
 
 @media (max-width:900px){
 
-    #section-about .my_photo{
-        position:relative;
-        left:0;
-        top:0;
-        width:280px;
-        max-width:90%;
-    }
-
-    #section-about .about-meta .meta-col:nth-child(1),
-    #section-about .about-meta .meta-col:nth-child(2),
-    #section-about .about-meta .meta-col:nth-child(3){
-        position:static;
-        left:auto;
-        top:auto;
+    #section-about .section-content{
+        transform:none;
+        width:100%;
     }
 
 }

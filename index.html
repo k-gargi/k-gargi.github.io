@@ -21,11 +21,13 @@ body{
     position:absolute !important;
     top:0 !important;
     bottom:auto !important;
+    min-height:100vh;
     height:auto !important;
     overflow:visible !important;
 }
 
 #section-about .section-content{
+    min-height:100vh;
     height:auto !important;
     overflow:visible !important;
 }
@@ -649,7 +651,7 @@ video[src*="turn table muscel"]{
   --gold:#d8b96a; --ease:cubic-bezier(.77,0,.18,1);
   --ease2:cubic-bezier(.25,.46,.45,.94);
 }
-html,body{min-height:100%;width:100%;overflow-x:hidden;overflow-y:auto !important;background:#05050a;
+html,body{height:100%;width:100%;overflow:hidden;background:#05050a;
   font-family:'Georgia',serif; cursor:none;}
 img{-webkit-user-drag:none;user-select:none;}
 button{cursor:none;}
@@ -766,12 +768,11 @@ a{cursor:none;}
 
 /* ─── SECTIONS ──────────────────────────────────── */
 .section{
-  position:absolute;top:0;left:0;right:0;bottom:auto;z-index:5;
-  min-height:100vh;height:auto;
+  position:fixed;inset:0;z-index:5;
   opacity:0;visibility:hidden;
   transition:opacity .7s var(--ease2),visibility .7s,transform .7s var(--ease2);
   transform:translateZ(-80px) scale(.97);
-  overflow:visible;
+  overflow:hidden;
 }
 .section.active{opacity:1;visibility:visible;transform:translateZ(0) scale(1);}
 .section.exit{transform:translateZ(-160px) scale(.94);opacity:0;}

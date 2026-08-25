@@ -21,13 +21,11 @@ body{
     position:absolute !important;
     top:0 !important;
     bottom:auto !important;
-    min-height:100vh;
     height:auto !important;
     overflow:visible !important;
 }
 
 #section-about .section-content{
-    min-height:100vh;
     height:auto !important;
     overflow:visible !important;
 }
@@ -738,7 +736,7 @@ a{cursor:none;}
 #cover.closing #enter-btn{transition:opacity .6s .6s;opacity:1;}
 
 /* ─── SITE ──────────────────────────────────────── */
-#site{position:absolute;top:0;left:0;right:0;bottom:auto;min-height:100vh;height:auto;z-index:1;opacity:0;visibility:hidden;transition:opacity .5s .8s;}
+#site{position:fixed;inset:0;z-index:1;opacity:0;visibility:hidden;transition:opacity .5s .8s;}
 #site.live{opacity:1;visibility:visible;}
 
 /* ─── NAV ───────────────────────────────────────── */

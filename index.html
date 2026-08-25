@@ -768,11 +768,12 @@ a{cursor:none;}
 
 /* ─── SECTIONS ──────────────────────────────────── */
 .section{
-  position:fixed;inset:0;z-index:5;
+  position:absolute;top:0;left:0;right:0;bottom:auto;z-index:5;
+  min-height:100vh;height:auto;
   opacity:0;visibility:hidden;
   transition:opacity .7s var(--ease2),visibility .7s,transform .7s var(--ease2);
   transform:translateZ(-80px) scale(.97);
-  overflow:hidden;
+  overflow:visible;
 }
 .section.active{opacity:1;visibility:visible;transform:translateZ(0) scale(1);}
 .section.exit{transform:translateZ(-160px) scale(.94);opacity:0;}
